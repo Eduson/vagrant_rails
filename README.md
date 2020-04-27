@@ -20,13 +20,13 @@
 1. Разворачиваем дамп БД `make update_db`
 1. Запускаем приложение `foreman start`
 
-# Настройки для подключения к БД
+# Настройки для подключения к БД с основной машины
 
-Host: localhost
-Port: 15432
-Initial Database: eduson_development
-User Name: eduson
-Password: eduson
+  * Host: `localhost`
+  * Port: `15432`
+  * Initial Database: `eduson_development`
+  * User Name: `eduson`
+  * Password: `eduson`
 
 # Команды для rbenv
 
