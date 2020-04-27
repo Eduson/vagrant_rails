@@ -1,0 +1,3 @@
+[submodule "files/eduson"]
+	path = files/eduson
+	url = git@github.com:Eduson/eduson.git
