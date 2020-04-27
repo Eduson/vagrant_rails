@@ -7,30 +7,34 @@
 
 # Развертывание виртуальной машины
 
-1. `git clone git@github.com:artanikin/vagrant_rails.git`
-2. Перейти в папку с проектом
-3. `vagrant up && notify-send --icon=$PWD/vagrant.svg 'Vagrant up complete'`
-4. Создать папку `files` (`mkdir files`)
-5. В папке `files` разместить файлы проекта
-11. Заходим на гостевую машину `vagrant ssh`
-12. С гостевой машины - переходим в проект (`/vagrant/files/проект`)
-13. Стартуем приложение `rails server -b 0.0.0.0`
+1. `git clone git@github.com:Eduson/vagrant_rails.git`
+1. Перейти в папку с проектом
+1. Инициализировать submodule `cd files/eduson`
+1. Обновить submodule `git submodule update`
+1. Вернуться в корень проекта `cd ../..`
+1. `vagrant up`
+1. Заходим на гостевую машину `vagrant ssh`
+1. С гостевой машины - переходим в проект (в конфиг добавлен alias `eduson`)
+1. Устанавливаем гемы `bundle install`
+1. Скопировать свои ssh ключи или добавить новые командой `ssh-keygen`
+1. Разворачиваем дамп БД `make update_db`
+1. Запускаем приложение `foreman start`
 
 # Настройки для подключения к БД
 
 Host: localhost
 Port: 15432
-Initial Database: postgres
-User Name: postgres
-Password: 123
+Initial Database: eduson_development
+User Name: eduson
+Password: eduson
 
 # Команды для rbenv
 
 * `rbenv versions` - список установленных версий ruby
 * `rbenv version` - отображает активную версию ruby
 * `rbenv install -l` - список всех доступных версий ruby
-* `rbenv install 2.4.0` - установка ruby
-* `rbenv uninstall 2.4.0` - удаление ruby
-* `rbenv local 2.4.0` - подключение версии ruby в обход global версии ruby
+* `rbenv install 2.4.10` - установка ruby
+* `rbenv uninstall 2.4.10` - удаление ruby
+* `rbenv local 2.4.10` - подключение версии ruby в обход global версии ruby
 * `rbenv local --unset` - отключение локальной версии ruby
-* `rbenv global 2.4.0` - установка версии ruby в качестве основной версии
+* `rbenv global 2.4.10` - установка версии ruby в качестве основной версии
