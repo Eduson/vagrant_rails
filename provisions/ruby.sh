@@ -16,6 +16,7 @@ echo 'export PATH="${RBENV_ROOT}/bin:$PATH"' >> ~/.bashrc
 echo 'export PATH="${RBENV_ROOT}/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 echo 'alias files="cd /vagrant/files"' >> ~/.bashrc
+echo 'alias eduson="cd /vagrant/files/eduson"' >> ~/.bashrc
 
 export RBENV_ROOT=/home/vagrant/.rbenv
 export PATH=${RBENV_ROOT}/bin:$PATH
